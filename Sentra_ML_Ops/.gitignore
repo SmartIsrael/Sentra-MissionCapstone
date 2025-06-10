@@ -1,0 +1,14 @@
+venv/
+dataset/
+__pycache__/
+scraper/
+dataset.zip
+
+notebooks/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Python cache files
+*.pyc
+# Python bytecode files
+*.pyo  
