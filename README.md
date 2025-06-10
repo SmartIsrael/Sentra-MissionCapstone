@@ -12,7 +12,7 @@
 
 ---
 
-[![Link to my initial model](https://drive.google.com/drive/folders/1VRbiZeuZ-9WAvu4x3r4Q3xV1lw5HyWBU?usp=sharing)
+(https://drive.google.com/drive/folders/1VRbiZeuZ-9WAvu4x3r4Q3xV1lw5HyWBU?usp=sharing)
 ## 📋 Table of Contents
 
 - [🔍 Overview](#-overview)
