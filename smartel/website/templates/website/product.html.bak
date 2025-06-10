@@ -1,0 +1,474 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Breadcrumb -->
+<section class="pq-breadcrumb-style-1">
+    <div class="container">
+        <div class="pq-breadcrumb">
+            <h1 class="pq-breadcrumb-title">Our Product</h1>
+        </div>
+    </div>
+</section>
+
+<!-- Product Hero Section -->
+<section class="product-hero py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 wow fadeInLeft">
+                <div class="product-hero-content pe-lg-4">
+                    <div class="pq-section-title">
+                        <div class="pq-title">
+                            <div class="pq-title-sub-title">
+                                <img src="{% static 'website/image/section-image/group_new.png' %}" alt="icon">
+                                <span>Our Technology</span>
+                            </div>
+                            <h5 class="pq-title-hadding">Sentra - Solar-Powered Crop Pest and Disease Detection Device</h5>
+                        </div>
+                    </div>
+                    <p class="mt-4">Revolutionizing agriculture with AI-driven early detection technology that empowers smallholder farmers with actionable insights and timely interventions.</p>
+                    <div class="product-features mt-4">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="product-feature-item">
+                                    <i class="flaticon-ecologist text-success"></i>
+                                    <span>98% Detection Accuracy</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="product-feature-item">
+                                    <i class="flaticon-crop text-success"></i>
+                                    <span>300m Coverage Radius</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="product-feature-item">
+                                    <i class="flaticon-sprout text-success"></i>
+                                    <span>100% Solar-Powered</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="product-feature-item">
+                                    <i class="flaticon-land text-success"></i>
+                                    <span>Real-time SMS Alerts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="{% url 'contact' %}" class="pq-button pq-button-flat">
+                            <span class="pq-button-text">Request a Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0 wow fadeInRight">
+                <div class="product-hero-image">
+                    <img src="{% static 'website/image/sentra-device.png' %}" alt="Sentra Device" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section class="key-features py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pq-section-title text-center wow fadeInUp">
+                    <div class="pq-title">
+                        <div class="pq-title-sub-title justify-content-center">
+                            <img src="{% static 'website/image/section-image/group_new.png' %}" alt="icon">
+                            <span>Product Features</span>
+                        </div>
+                        <h5 class="pq-title-hadding">Cutting-Edge <span>Technology</span> for Modern Farming</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- Feature 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="flaticon-planting-1"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Real-Time Alerts</h4>
+                        <p>Using IoT and hyperspectral imaging technologies, our device detects pests, diseases, and nutrient deficiencies with 98% accuracy, sending immediate alerts to farmers.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="flaticon-tractor"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Comprehensive Monitoring</h4>
+                        <p>Covers a 300-meter radius, serving 2-3 farmers simultaneously with continuous scanning and data collection for thorough farm health monitoring.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="flaticon-corn"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Actionable Insights</h4>
+                        <p>Sends SMS alerts with tailored recommendations for timely intervention, empowering farmers with specific actions to address identified issues.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="flaticon-wind-mill"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Environmentally Friendly</h4>
+                        <p>100% solar-powered, ensuring sustainability and off-grid functionality even in remote farming areas without reliable electricity.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 5 -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="flaticon-data-management"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Big Data Analytics</h4>
+                        <p>All data collected from devices is transmitted to our data dashboard for analysis, generating insights for improved agricultural decision-making.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 6 -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">
+                        <i class="flaticon-sprout"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Sustainable Farming</h4>
+                        <p>Reduces chemical use by enabling precise, targeted interventions only when necessary, promoting environmentally sustainable farming practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Data Dashboard Section -->
+<section class="dashboard-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 wow fadeInLeft">
+                <div class="dashboard-image pq-moving-start">
+                    <img src="{% static 'website/image/dashboard.png' %}" alt="Sentra Dashboard" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0 wow fadeInRight">
+                <div class="dashboard-content ps-lg-4">
+                    <div class="pq-section-title">
+                        <div class="pq-title">
+                            <div class="pq-title-sub-title">
+                                <img src="{% static 'website/image/section-image/group_new.png' %}" alt="icon">
+                                <span>Smart Insights</span>
+                            </div>
+                            <h5 class="pq-title-hadding">Data Dashboard</h5>
+                        </div>
+                    </div>
+                    <p class="mt-4">Our sophisticated dashboard transforms complex farm data into visual insights that drive better decision-making:</p>
+                    <ul class="pq-list mt-4">
+                        <li class="pq-list-item">
+                            <i aria-hidden="true" class="flaticon-next"></i>
+                            <span class="pq-list-description">Visualizes farm health data, trends, and actionable insights</span>
+                        </li>
+                        <li class="pq-list-item">
+                            <i aria-hidden="true" class="flaticon-next"></i>
+                            <span class="pq-list-description">Integrates data from IoT sensors and images for comprehensive analysis</span>
+                        </li>
+                        <li class="pq-list-item">
+                            <i aria-hidden="true" class="flaticon-next"></i>
+                            <span class="pq-list-description">Tracks pest and disease patterns over time for predictive insights</span>
+                        </li>
+                        <li class="pq-list-item">
+                            <i aria-hidden="true" class="flaticon-next"></i>
+                            <span class="pq-list-description">Enables data-driven decisions for improved farm management</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pq-section-title text-center wow fadeInUp">
+                    <div class="pq-title">
+                        <div class="pq-title-sub-title justify-content-center">
+                            <img src="{% static 'website/image/section-image/group_new.png' %}" alt="icon">
+                            <span>Simple Process</span>
+                        </div>
+                        <h5 class="pq-title-hadding">How It <span>Works</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="process-steps">
+                    <div class="row">
+                        <!-- Step 1 -->
+                        <div class="col-md-3 mb-4 mb-md-0 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="process-step text-center">
+                                <!-- <div class="step-number">1</div> -->
+                                <div class="step-icon">
+                                    <i class="flaticon-planting"></i>
+                                </div>
+                                <h5>Setup</h5>
+                                <p>Place the device in your field and perform a simple tuning process to optimize for your specific crops.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="col-md-3 mb-4 mb-md-0 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="process-step text-center">
+                                <!-- <div class="step-number">2</div> -->
+                                <div class="step-icon">
+                                    <i class="flaticon-ecologist"></i>
+                                </div>
+                                <h5>Monitoring</h5>
+                                <p>The device continuously scans crops within a 300-meter radius, taking periodic images for analysis.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="col-md-3 mb-4 mb-md-0 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="process-step text-center">
+                                <!-- <div class="step-number">3</div> -->
+                                <div class="step-icon">
+                                    <i class="flaticon-mail"></i>
+                                </div>
+                                <h5>Alerts</h5>
+                                <p>Upon identifying abnormalities, farmers receive immediate SMS notifications with specific recommendations.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4 -->
+                        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="process-step text-center">
+                                <!-- <div class="step-number">4</div> -->
+                                <div class="step-icon">
+                                    <i class="flaticon-shovel"></i>
+                                </div>
+                                <h5>Action</h5>
+                                <p>Implement targeted interventions based on data-driven insights to protect your crops and increase yield.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cta-box text-center p-5 rounded wow fadeInUp">
+                    <h3>Ready to Transform Your Farm?</h3>
+                    <p class="mt-3">Get in touch with us today to learn more about Sentra and how it can help improve your agricultural productivity.</p>
+                    <div class="mt-4">
+                        <a href="{% url 'contact' %}" class="pq-button pq-button-flat">
+                            <span class="pq-button-text">Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Link to Product Page CSS -->
+<link rel="stylesheet" href="{% static 'website/css/product-page.css' %}">
+    
+    .product-feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .product-feature-item i {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #6b8e23;
+    }
+    
+    /* Features Section */
+    .feature-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px 25px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        border-left: 3px solid #6b8e23;
+    }
+    
+    .feature-icon {
+        font-size: 2.5rem;
+        color: #6b8e23;
+        margin-bottom: 20px;
+    }
+    
+    .feature-content h4 {
+        margin-bottom: 15px;
+        font-size: 1.25rem;
+    }
+    
+    /* Dashboard Section */
+    .dashboard-image img {
+        transition: all 0.5s ease;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .dashboard-image:hover img {
+        transform: scale(1.02);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    
+    /* How It Works */
+    .process-step {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 25px 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        height: 100%;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .step-number {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: #6b8e23;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+    
+    .step-icon {
+        font-size: 2.5rem;
+        color: #6b8e23;
+        margin: 20px 0;
+    }
+    
+    .process-step h5 {
+        margin-bottom: 15px;
+    }
+    
+    /* Call to Action */
+    .cta-box {
+        background: linear-gradient(135deg, #6b8e23 0%, #556b1e 100%);
+        color: #fff;
+        box-shadow: 0 15px 30px rgba(107, 142, 35, 0.3);
+    }
+    
+    .cta-box h3 {
+        color: #fff;
+    }
+    
+    .cta-box .pq-button-flat {
+        background-color: #fff;
+        color: #6b8e23;
+    }
+    
+    .cta-box .pq-button-flat .pq-button-text {
+        color: #6b8e23;
+    }
+    
+    .cta-box .pq-button-flat:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+</style>
+
+<!-- Additional JS for animations -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize any additional JS functionality here
+        
+        // Example: Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add floating animation to the dashboard image
+        if (typeof gsap !== 'undefined') {
+            gsap.to(".dashboard-image", {
+                y: -15, 
+                duration: 2, 
+                repeat: -1, 
+                yoyo: true, 
+                ease: "sine.inOut"
+            });
+        }
+        
+        // Add hover effects to the list items
+        const listItems = document.querySelectorAll('.dashboard-content .pq-list-item');
+        listItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.querySelector('i').classList.add('pulse-animation');
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.querySelector('i').classList.remove('pulse-animation');
+            });
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Load optimized contact CSS -->
+<link rel="stylesheet" href="{% static 'website/css/contact.css' %}">
+<!-- Breadcrumb -->
+<section class="pq-breadcrumb-style-1">
+    <div class="container">
+        <div class="pq-breadcrumb">
+            <h1 class="pq-breadcrumb-title">Contact Us</h1>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="pq-section-title">
+                    <div class="pq-title">
+                        <div class="pq-title-sub-title">
+                            <img src="{% static 'website/image/section-image/group_new.png' %}" alt="icon">
+                            <span>Get In Touch</span>
+                        </div>
+                        <h5 class="pq-title-hadding">Have Questions or Want to Partner?</h5>
+                        <p class="pq-title-description mt-4">
+                            We're always looking to connect with farmers, organizations, and potential partners who are interested in improving agricultural practices through technology.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="contact-details mt-5">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="contact-info-box p-4 rounded bg-light">
+                                <div class="icon-box mb-3">
+                                    <i class="flaticon-phone-call text-success"></i>
+                                </div>
+                                <h5>Call Us</h5>
+                                <p class="mb-0"><a href="tel:+250791704244" class="text-dark">+250 791 704 244</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="contact-info-box p-4 rounded bg-light">
+                                <div class="icon-box mb-3">
+                                    <i class="flaticon-mail text-success"></i>
+                                </div>
+                                <h5>Email Us</h5>
+                                <p class="mb-0"><a href="mailto:Sentra@gmail.com" class="text-dark">Sentra@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="social-links mt-4">
+                        <h5 class="mb-3">Follow Us</h5>
+                        <ul class="list-inline">
+                            <li class="list-inline-item me-3">
+                                <a href="https://www.instagram.com/Smartelglobal" target="_blank" class="social-icon">
+                                    <i class="fab fa-instagram fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item me-3">
+                                <a href="https://www.linkedin.com/company/Smartelglobal" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.youtube.com/c/Smartelglobal" target="_blank" class="social-icon">
+                                    <i class="fab fa-youtube fa-2x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <!-- Contact Form -->
+                <form class="pq-contact-form mt-4" id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="pq-button pq-button-flat">
+                                <span class="pq-button-text">Send Message</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255282.35853842806!2d29.98622920944621!3d-1.9435568051927463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411f0de7!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2sug!4v1715420368431!5m2!1sen!2sug" 
+                    width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Statement -->
+<section class="mission-statement bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h4 class="mb-3">Our Mission</h4>
+                <p class="lead">Our mission is to mainstream advanced agricultural technologies making them affordable and accessible, fostering food security, and ensuring environmental sustainability.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    // Form validation and submission handling
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simple form validation feedback
+                let formValid = true;
+                const formInputs = contactForm.querySelectorAll('input[required], textarea[required]');
+                
+                formInputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        input.classList.add('is-invalid');
+                        formValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                        input.classList.add('is-valid');
+                    }
+                });
+                
+                if (formValid) {
+                    // Show success message (in a real scenario, this would send data to a server)
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'alert alert-success mt-3';
+                    successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                    
+                    contactForm.appendChild(successMessage);
+                    contactForm.reset();
+                    
+                    // Remove success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.remove();
+                        formInputs.forEach(input => {
+                            input.classList.remove('is-valid');
+                        });
+                    }, 5000);
+                }
+            });
+            
+            // Remove invalid class on input
+            contactForm.querySelectorAll('input, textarea').forEach(input => {
+                input.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        this.classList.remove('is-invalid');
+                    }
+                });
+            });
+        }
+    });
+</script>
+{% endblock %}

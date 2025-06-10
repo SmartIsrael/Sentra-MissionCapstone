@@ -1,0 +1,210 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Link to Portfolio/Careers CSS -->
+<link rel="stylesheet" href="{% static 'website/css/portfolio-details.css' %}">
+
+<!-- Breadcrumb -->
+<section class="pq-breadcrumb-style-1">
+    <div class="container">
+        <div class="pq-breadcrumb">
+            <h1 class="pq-breadcrumb-title">Careers at Sentra</h1>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Carousel Section -->
+<section class="careers-carousel">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="owl-carousel" data-dots="false" data-nav="true" data-desk_num="1"
+                    data-lap_num="1" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
+                    data-loop="true" data-margin="0">
+                    <div class="item">
+                        <img src="{% static 'website/image/careers/career-2.jpg' %}" alt="Sentra Team">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'website/image/careers/career-3.jpg' %}" alt="Innovation at Sentra">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Work With Us Section -->
+<section class="why-work-with-us py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pq-section-title text-center">
+                    <div class="pq-title">
+                        <div class="pq-title-sub-title justify-content-center">
+                            <img src="{% static 'website/image/section-image/group_new.png' %}" alt="icon">
+                            <span>Join Our Team</span>
+                        </div>
+                        <h5 class="pq-title-hadding">Why Work With Us?</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="career-description">
+                    <p class="text-center mb-5">At Sentra, we believe in making a tangible difference in the lives of smallholder farmers and the environment. Joining our team means becoming part of a mission-driven organization that values innovation, collaboration, and impact. We offer opportunities to work on cutting-edge agricultural technologies, contribute to sustainable development, and grow your career in a dynamic and supportive environment. Our team is united by a shared purpose: empowering communities, advancing food security, and fostering environmental sustainability.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Values & Benefits -->
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body text-center py-5">
+                        <div class="mb-4">
+                            <i class="flaticon-sprout text-success icon-large"></i>
+                        </div>
+                        <h4>Mission-Driven</h4>
+                        <p>Make a meaningful impact on global food security and environmental sustainability through technology</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body text-center py-5">
+                        <div class="mb-4">
+                            <i class="flaticon-ecologist text-success icon-large"></i>
+                        </div>
+                        <h4>Innovation</h4>
+                        <p>Work with cutting-edge technologies including AI, IoT, and machine learning in a fast-paced environment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body text-center py-5">
+                        <div class="mb-4">
+                            <i class="flaticon-planting-1 text-success icon-large"></i>
+                        </div>
+                        <h4>Growth</h4>
+                        <p>Develop your skills in a supportive environment with opportunities for learning and career advancement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Available Opportunities Section -->
+<section class="available-opportunities py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pq-section-title text-center">
+                    <div class="pq-title">
+                        <div class="pq-title-sub-title justify-content-center">
+                            <img src="{% static 'website/image/section-image/group_new.png' %}" alt="icon">
+                            <span>Open Positions</span>
+                        </div>
+                        <h5 class="pq-title-hadding">Available Opportunities</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Listings -->
+        <div class="row mt-5">
+            <!-- Data Analyst Position -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body p-4">
+                        <h4 class="card-title text-success">Data Analyst</h4>
+                        <p class="card-text mt-3">Analyze agricultural data to provide actionable insights for farmers and stakeholders.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Data visualization</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Statistical analysis</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Reporting & forecasting</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-4">
+                        <a href="#" class="btn btn-outline-success">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Field Support Officer Position -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body p-4">
+                        <h4 class="card-title text-success">Field Support Officer</h4>
+                        <p class="card-text mt-3">Provide on-the-ground support and training for farmers using our technology.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Technical troubleshooting</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Farmer training & onboarding</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Field data collection</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-4">
+                        <a href="#" class="btn btn-outline-success">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Software Engineer Position -->
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow">
+                    <div class="card-body p-4">
+                        <h4 class="card-title text-success">Senior ML Engineer</h4>
+                        <p class="card-text mt-3">Design and optimize our IoT and data analytics systems.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>ML algorithm development</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Cloud infrastructure management</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>IoT system integration</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-4">
+                        <a href="#" class="btn btn-outline-success">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Apply Message -->
+        <div class="row mt-4">
+            <div class="col-lg-12 text-center">
+                <p class="mb-0">If you're passionate about creating meaningful change and want to be part of our journey, we'd love to hear from you!</p>
+                <div class="mt-4">
+                    <a href="{% url 'contact' %}" class="pq-button pq-button-flat">
+                        <span class="pq-button-text">Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add hover animations to job cards
+        const jobCards = document.querySelectorAll('.card');
+        
+        jobCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.querySelector('.btn-outline-success').classList.add('btn-pulse');
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.querySelector('.btn-outline-success').classList.remove('btn-pulse');
+            });
+        });
+    });
+</script>
+{% endblock %}

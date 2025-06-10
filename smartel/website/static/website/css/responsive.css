@@ -1,0 +1,387 @@
+/* Responsive styles for Sentra website */
+
+/* General responsive adjustments */
+@media (max-width: 1399px) {
+    /* Adjusted header spacing for large screens */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item {
+        margin-right: 20px; /* Reduced from 30px */
+    }
+    
+    /* Adjust Get in Touch button size */
+    .pq-button.pq-button-flat {
+        padding: 10px 20px; /* Slightly smaller padding */
+    }
+    
+    .pq-button-text {
+        font-size: 16px; /* Slightly smaller font */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+}
+
+@media (max-width: 1279px) {
+    /* Prevent menu items from breaking into two lines */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item a {
+        font-size: 14px; /* Slightly smaller font */
+        white-space: nowrap; /* Force text to stay on one line */
+    }
+    
+    /* Further reduce spacing between menu items */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item {
+        margin-right: 15px;
+    }
+    
+    /* Make Get in Touch button visible on all device sizes */
+    .pq-header-style-1 .pq-bottom-header .pq-header-right .pq-header-icon .pq-btn-container {
+        display: inline-block !important; /* Override the display: none from max-width:1279px */
+    }
+    
+    /* Adjust button for smaller screens */
+    .pq-button.pq-button-flat {
+        padding: 8px 16px; /* Smaller padding */
+        font-size: 14px; /* Smaller font */
+    }
+}
+
+@media (max-width: 1199px) {
+    /* Additional adjustments for smaller screens */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item {
+        margin-right: 10px; /* Even less space between items */
+    }
+    
+    /* Further reduce the size of the Get in Touch button */
+    .pq-button.pq-button-flat {
+        padding: 7px 15px;
+    }
+    
+    .pq-button-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1023px) {
+    /* Mobile menu settings */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu {
+        flex-wrap: wrap; /* Allow wrapping for mobile menu */
+    }
+    
+    /* Stack menu items vertically on mobile */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    /* Ensure menu items display properly in mobile menu */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item a {
+        white-space: normal; /* Allow wrapping in dropdown mobile menu */
+        line-height: normal;
+        padding: 8px 10px; /* Reduce padding for more compact appearance */
+        display: block; /* Make the entire area clickable */
+        width: 100%;
+    }
+    
+    /* Hide Get in Touch button completely on mobile as requested */
+    .pq-header-right.d-none.d-lg-block,
+    .mobile-get-in-touch {
+        display: none !important;
+    }
+    
+    .pq-header-icon {
+        justify-content: center;
+    }
+    
+    /* Make the navbar shorter with reduced padding */
+    .pq-header-style-1 .pq-bottom-header {
+        padding: 8px 0;
+    }
+    
+    /* Reduce logo size for shorter navbar */
+    .pq-header-style-1 .navbar-brand img.logo {
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Font size adjustments for mobile */
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Styles for small mobile devices */
+    .pq-button.pq-button-flat {
+        padding: 5px 10px;
+    }
+    
+    .pq-button-text {
+        font-size: 13px;
+    }
+    
+    /* Center buttons in content areas */
+    .pq-btn-container {
+        display: block;
+        text-align: center;
+        margin: 3px auto;
+    }
+    
+    /* Make all buttons in content areas responsive */
+    section .pq-button.pq-button-flat {
+        display: inline-block;
+        padding: 6px 12px;
+        white-space: nowrap;
+    }
+    
+    /* Even more compact header for mobile */
+    .pq-header-style-1 .pq-bottom-header {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    /* Smaller logo on mobile for shorter navbar */
+    .pq-header-style-1 .navbar-brand img.logo {
+        max-height: 32px;
+        width: auto;
+    }
+    
+    /* Align navbar elements properly */
+    .pq-header-style-1 .navbar {
+        justify-content: space-between !important;
+        align-items: center;
+    }
+    
+    /* Reduce padding around elements on mobile */
+    .pq-header-style-1 .navbar-brand {
+        padding: 2px 0;
+        margin-right: 0;
+    }
+    
+    /* Adjust mobile menu spacing */
+    .pq-header-style-1 .navbar-collapse {
+        padding-top: 5px;
+        margin-top: 5px;
+    }
+    
+    /* Make menu toggle button more compact */
+    .navbar-toggler {
+        padding: 3px 6px;
+        font-size: 0.85rem;
+        margin-left: 5px;
+    }
+    
+    /* More compact mobile menu items */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Reduce section padding */
+    section {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    
+    /* Adjust container padding */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* Extra optimization for very small phones */
+@media (max-width: 480px) {
+    /* Further reduce header padding - make it ultra compact */
+    .pq-header-style-1 .pq-bottom-header {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    
+    /* Make logo even smaller for very small screens */
+    .pq-header-style-1 .navbar-brand img.logo {
+        max-height: 28px;
+    }
+    
+    /* Ultra-compact toggle button */
+    .navbar-toggler {
+        padding: 2px 4px;
+        font-size: 0.8rem;
+    }
+    
+    /* Remove any margin from the collapsed menu */
+    .pq-header-style-1 .pq-mobile-menu-container {
+        margin-top: 0;
+    }
+    
+    /* More compact menu items on very small screens */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item a {
+        padding: 4px 8px;
+        font-size: 90%;
+    }
+    
+    /* Tighten up elements in the navbar */
+    .pq-header-style-1 .navbar > * {
+        margin: 0 3px;
+    }
+    
+    /* Ensure menu toggle is easily tappable but not too big */
+    .navbar-toggler i {
+        font-size: 1rem;
+    }
+}
+
+/* Specific fix for all menu items to prevent wrapping */
+.pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item a {
+    white-space: nowrap; /* Ensure text stays on one line for all items */
+    display: inline-block; /* Better control over text */
+}
+
+/* Global button text fix to prevent wrapping */
+.pq-button-text {
+    white-space: nowrap;
+}
+
+/* Fix for button containers in all locations */
+.pq-btn-container {
+    display: inline-block;
+}
+
+/* Additional rules for buttons in content sections */
+.cta-section .pq-button-flat,
+.portfolio-details .pq-button-flat,
+.contact-form .pq-button-flat,
+.available-opportunities .pq-button-flat {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Mobile and tablet optimizations */
+@media (max-width: 991px) {
+    /* Hide Get in Touch button on mobile as requested */
+    .pq-header-style-1 .pq-header-right {
+        display: none !important;
+    }
+    
+    /* Completely remove Get in Touch button from mobile devices */
+    .mobile-get-in-touch {
+        display: none !important;
+    }
+    
+    /* Better vertical alignment of navbar elements */
+    .pq-header-style-1 .navbar {
+        align-items: center;
+        height: auto;
+    }
+    
+    /* Optimize toggle button position */
+    .navbar-toggler {
+        margin: 0;
+        align-self: center;
+        border: none;
+    }
+    
+    /* Keep logo vertically centered and reduce its size */
+    .pq-header-style-1 .pq-header-logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    
+    /* Make navbar shorter with less padding */
+    .pq-header-style-1 .pq-bottom-header .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+        min-height: 0;
+    }
+    
+    /* Remove right margin from menu items */
+    .pq-header-style-1 .pq-bottom-header .pq-menu-contain .pq-main-menu .menu-item {
+        margin-right: 0;
+    }
+    
+    /* Improve menu display and scrolling */
+    .navbar-collapse {
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+    
+    /* Fix navbar spacing */
+    .navbar-brand {
+        margin-right: 0;
+    }
+    
+    /* Remove box-shadow from toggle button */
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+}
+
+/* Additional responsive fixes for navbar height - works cross-browser */
+.pq-header-style-1 {
+    transition: all 0.3s ease;
+}
+
+/* Adjust navbar height on scroll and on small screens */
+@media (min-width: 992px) {
+    /* Default state */
+    .pq-header-style-1 .pq-bottom-header {
+        padding: 10px 0;
+    }
+    
+    /* Scrolled state - make navbar shorter */
+    .pq-header-sticky .pq-bottom-header {
+        padding: 5px 0;
+    }
+    
+    .pq-header-sticky .navbar-brand img.logo {
+        max-height: 42px;
+        transition: all 0.3s ease;
+    }
+}
+
+/* Force navbar to maintain smaller height on all devices */
+.navbar-toggler {
+    height: auto;
+    min-height: 0;
+}
+
+/* Ensure menu items stay aligned properly */
+.pq-main-menu {
+    margin-bottom: 0;
+}
+
+/* Fix iOS-specific issues with navbar height */
+@supports (-webkit-touch-callout: none) {
+    /* iOS devices */
+    .pq-header-style-1 .pq-bottom-header {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    
+    .navbar-toggler {
+        padding: 3px 5px !important;
+    }
+}
+
+/* Fix any potential issues with mobile menu not closing */
+@media (max-width: 991px) {
+    /* Ensure mobile menu closes properly */
+    .navbar-collapse.collapse:not(.show) {
+        display: none !important;
+    }
+}

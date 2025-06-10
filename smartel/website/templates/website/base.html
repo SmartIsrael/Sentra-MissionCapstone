@@ -1,0 +1,451 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Early browser hints & resource preloading -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//secureserver.net">
+
+    <!-- Title - Critical for UX and SEO -->
+    <title>Sentra - Solar-Powered Crop Pest Detection</title>
+    
+    <!-- Meta Description - High priority for SEO -->
+    <meta name="description" content="Sentra - Solar-powered crop pest and disease detection technology. Real-time monitoring, early detection, and AI-driven insights to protect smallholder farmers' crops.">
+    
+    <!-- Favicon icon - render early for visual identity -->
+    <link rel="shortcut icon" href="{% static 'website/image/favicon/favicon.png' %}">
+
+    <!-- Critical CSS inline to eliminate render-blocking - prioritized for above-the-fold content -->
+    <style>
+        /* Critical Path CSS - renders instantly, no waiting */
+        body { margin: 0; font-family: system-ui, -apple-system, sans-serif; opacity: 1; visibility: visible; }
+        #pq-loading { position: fixed; z-index: 999999; height: 100%; width: 100%; background: #fff; display: flex; align-items: center; justify-content: center; }
+        .banner { position: relative; width: 100%; }
+        .smartel-slider { position: relative; width: 100%; height: 100vh; overflow: hidden; }
+        .pq-header-style-1 { position: relative; width: 100%; }
+        .pq-top-header { background-color: #f7f7f7; padding: 10px 0; }
+        .top-header-row { display: flex; justify-content: space-between; align-items: center; }
+        .pq-header-logo img { max-height: 50px; transition: max-height 0.3s; }
+        .pq-bottom-header { background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .pq-has-sticky { position: sticky; top: 0; z-index: 100; }
+        .navbar { padding: 0; }
+        .navbar-brand { padding: 10px 0; }
+        .pq-main-menu { list-style: none; margin: 0; padding: 0; display: flex; }
+        .pq-main-menu li { position: relative; margin: 0 15px; }
+        .pq-main-menu li a { color: #333; text-decoration: none; padding: 20px 0; display: inline-block; font-weight: 500; }
+    </style>
+
+    <!-- Preload highest priority resources - KEY CHANGE: prioritize main resources -->
+    <link rel="preload" href="{% static 'website/image/logo/logo-1.png' %}" as="image" fetchpriority="high">
+    <link rel="preload" href="{% static 'website/image/section-image/group_new.png' %}" as="image" fetchpriority="high">
+    <link rel="preload" href="{% static 'website/css/bootstrap.min.css' %}" as="style">
+    <link rel="preload" href="{% static 'website/css/style.css' %}" as="style">
+    <link rel="preload" href="{% static 'website/js/jquery-3.7.1.js' %}" as="script">
+    <link rel="preload" href="{% static 'website/font/font-awesome/webfonts/fa-solid-900.woff2' %}" as="font" type="font/woff2" crossorigin>
+
+    <!-- Critical CSS loaded immediately -->
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    
+    <!-- Font Awesome icons (used in the header/nav) - prioritized but with fallback pattern -->
+    <link rel="stylesheet" href="{% static 'website/font/font-awesome/css/all.min.css' %}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{% static 'website/font/font-awesome/css/all.min.css' %}"></noscript>
+    
+    <!-- Non-critical styles deferred with lowest priority -->
+    <link rel="stylesheet" href="{% static 'website/css/responsive.css' %}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{% static 'website/css/animations.min.css' %}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{% static 'website/css/owl.carousel.css' %}" media="print" onload="this.media='all'">
+    
+    <!-- Font Link - loaded asynchronously with low priority -->
+    <link rel="stylesheet" href="{% static 'website/font/flaticons_1/flaticon_agriculture.css' %}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{% static 'website/font/flaticons_2/flaticon_mycollection.css' %}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{% static 'website/font/ionicons/ionicons.min.css' %}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{% static 'website/font/themify-icons/themify-icons.css' %}" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers without JS -->
+    <noscript>
+        <link rel="stylesheet" href="{% static 'website/css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static 'website/css/animations.min.css' %}">
+        <link rel="stylesheet" href="{% static 'website/css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'website/font/flaticons_1/flaticon_agriculture.css' %}">
+        <link rel="stylesheet" href="{% static 'website/font/flaticons_2/flaticon_mycollection.css' %}">
+        <link rel="stylesheet" href="{% static 'website/font/ionicons/ionicons.min.css' %}">
+        <link rel="stylesheet" href="{% static 'website/font/themify-icons/themify-icons.css' %}">
+    </noscript>
+    
+    <!-- Critical JS inline for best performance -->
+    <script>
+    // Tiny, immediate-execution performance script to enhance early interaction
+    (function() {
+        // Mark start time for performance measurement
+        window.perfData = { start: performance.now() };
+        
+        // Prioritize LCP element loading
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find hero image and ensure it loads first (for LCP optimization)
+            const lcpElements = document.querySelectorAll('.banner img, .pq-header-logo img, .smartel-slider img');
+            lcpElements.forEach(function(img) {
+                if(img) {
+                    img.loading = 'eager';
+                    img.fetchPriority = 'high';
+                    img.importance = 'high';
+                }
+            });
+        });
+        
+        // Setup delayed loading for non-critical resources
+        window.addEventListener('load', function() {
+            window.perfData.windowLoaded = performance.now();
+        });
+    })();
+    </script>
+    
+    <!-- Priority loader - manages resource loading order -->
+    <script src="{% static 'website/js/priority-loader.js' %}" async></script>
+</head>
+
+<body>
+    <!-- Loading spinner - enabled for better UX -->
+    <div id="pq-loading">
+        <div id="pq-loading-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Hide loading spinner as soon as possible
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            const loader = document.getElementById('pq-loading');
+            if (loader) {
+                loader.style.transition = 'opacity 0.3s ease';
+                loader.style.opacity = '0';
+                setTimeout(function() { loader.style.display = 'none'; }, 300);
+            }
+        }, 500); // Slightly longer timeout to ensure critical content is rendered
+    });
+    </script>
+
+    <!-- Header -->
+    <header id="pq-header" class="pq-header-style-1 pq-has-sticky">
+        <div class="pq-top-header top-style-1">
+            <div class="container-fluid">
+                <div class="top-header-row">
+                    <!-- Contact Information -->
+                    <div class="pq-header-contact text-right">
+                        <ul>
+                            <li>
+                                <i class="flaticon-location"></i>
+                                <span>Kigali, Rwanda</span>
+                            </li>
+        
+                            <li>
+                                <a href="mailto:sentra@gmail.com">
+                                    <i class="flaticon-mail"></i>
+                                    <span>sentra@gmail.com</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <!-- Social Media Links -->
+                    <div class="pq-header-social">
+                        <ul>
+                            <li><a href="https://facebook.com/sentra"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://linkedin.com/company/sentra"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://twitter.com/sentra"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://youtube.com/sentra"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="pq-bottom-header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+                    <div class="pq-header-logo">
+                        <a class="navbar-brand" href="/">
+                            <img class="img-fluid logo" src="{% static 'website/image/logo/logo-1.png' %}" alt="Sentra">
+                        </a>
+                    </div>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <div class="pq-menu-contain">
+                            <ul class="pq-main-menu">
+                                <li class="menu-item current-menu-item">
+                                    <a href="/">Home</a>
+                                </li>
+                    
+                                <li class="menu-item">
+                                    <a href="/#about">About</a>
+                                </li>
+                    
+                                <li class="menu-item">
+                                    <a href="/#features">Features</a>
+                                </li>
+                    
+                                <li class="menu-item">
+                                    <a href="/#impact">Impact</a>
+                                </li>
+                                
+                                <li class="menu-item">
+                                    <a href="{% url 'product' %}">Our Product</a>
+                                </li>
+                    
+                                <li class="menu-item">
+                                    <a href="{% url 'portfolio-details' %}">Careers</a>
+                                </li>
+                    
+                                <li class="menu-item">
+                                    <a href="{% url 'contact' %}">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pq-header-right d-none d-lg-block">
+                        <div class="pq-header-icon">
+                            <!-- Clickable Phone Contact -->
+                            <div class="pq-header-contact">
+                                <a href="tel:+250791704244">
+                                    <div class="pq-icon">
+                                        <i class="flaticon-phone-call"></i>
+                                    </div>
+                                    <span>+250 791 704 244</span>
+                                </a>
+                            </div>
+                    
+                            <!-- Smooth Scroll to Contact Section -->
+                            <div class="pq-btn-container">
+                                <a href="#contact" class="pq-button pq-button-flat">
+                                    <span class="pq-button-text">Get in Touch</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Content -->
+    {% block content %}
+    
+    {% endblock %}
+
+<!-- Footer -->
+<footer id="pq-footer">
+    <div class="pq-footer-style-1">
+        <div class="pq-footer-top">
+            <div class="container">
+                <div class="pq-footer-top-widget">
+                    <div class="pq-footer-column-1">
+                        <div class="widget">
+                            <h2 class="pq-footer-title">Empowering Farmers with AI-Powered <span> Precision Agriculture</span></h2>
+                        </div>
+                    </div>
+                    <div class="pq-footer-column-2">
+                        <div class="widget">
+                            <div class="pq-popup-animation pq-style-1">
+                                <div class="pq-popup-inner">
+                                    <div class="pq-popup-content">
+                                        <a href="#">
+                                            <i class="ti-arrow-top-right"></i>
+                                        </a>
+                                    </div>
+                                    <img src="{% static 'website/image/popup/popup-animation.png' %}" alt="popup-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pq-footer-column-3">
+                        <img src="{% static 'website/image/logo/logo-1.png' %}" class="pq-footer-logo" alt="sentra-footer-logo">
+                    </div>
+                    <div class="pq-footer-column-4">
+                        <div class="widget">
+                            <div class="menu-footer-container">
+                                <ul id="menu-footer" class="menu">
+                                    <li class="menu-item">
+                                        <a href="/" aria-current="page">Home</a>
+                                    </li>
+                                    <li class="menu-item"><a href="/#about">About Us</a></li>
+                                    <li class="menu-item"><a href="{% url 'product' %}">Our Product</a></li>
+                                    <li class="menu-item"><a href="{% url 'portfolio-details' %}">Careers</a></li>
+                                    <li class="menu-item"><a href="{% url 'contact' %}">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pq-copyright-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <span class="pq-copyright">
+                            <p>
+                                Copyright 2024 Sentra | All Rights Reserved
+                            </p>
+                        </span>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="pq-footer-social">
+                            <span>Follow Us: </span>
+                            <ul>
+                                <li>
+                                    <a href="https://facebook.com/sentra">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://linkedin.com/company/sentra">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/sentra">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://youtube.com/sentra">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- back-to-top -->
+    <div id="back-to-top">
+        <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
+    </div>
+
+    <!-- Core JS with priority loading strategy -->
+<!-- Critical JS loaded with high priority -->
+<script src="{% static 'website/js/jquery-3.7.1.js' %}"></script>
+<script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+
+<!-- Interactive scripts with medium priority - loaded after core but before decorative -->
+<script defer src="{% static 'website/js/custom.js' %}"></script>
+<script defer src="{% static 'website/js/load-more.js' %}"></script>
+
+<!-- Navigation enhancement script - runs immediately for better UX -->
+<script>
+// Lightweight navigation script for immediate execution
+(function() {
+    // Fix for iOS devices - preventing text size adjustment
+    document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+    
+    // Setup navigation behavior as soon as DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        // Optimize navbar interactions
+        const navbarMenu = document.getElementById('navbarNavDropdown');
+        const togglerButton = document.querySelector('.navbar-toggler');
+        const header = document.getElementById('pq-header');
+        
+        // Make navbar more compact immediately (don't wait for scroll)
+        if (window.innerWidth <= 991) {
+            if (header) header.classList.add('pq-header-sticky');
+        
+        if (navbarMenu && togglerButton) {
+            // Close navbar when clicking outside - performance optimized
+            document.addEventListener('click', function(event) {
+                if (navbarMenu.classList.contains('show') && 
+                    !navbarMenu.contains(event.target) && 
+                    !togglerButton.contains(event.target)) {
+                    navbarMenu.classList.remove('show');
+                }
+            }, {passive: true});
+            
+            // Close navbar when links are clicked - optimized
+            document.querySelectorAll('.navbar-collapse a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (navbarMenu.classList.contains('show')) {
+                        navbarMenu.classList.remove('show');
+                    }
+                }, {passive: true});
+            });
+        }
+        
+        // Optimize active menu highlighting - critical for UX
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.pq-main-menu .menu-item').forEach(function(item) {
+            const link = item.querySelector('a');
+            if (!link) return;
+            
+            const href = link.getAttribute('href');
+            if ((href === '/' && currentPath === '/') || 
+                (href !== '/' && currentPath.includes(href.replace('/#', '')))) {
+                item.classList.add('current-menu-item');
+            }
+        });
+        
+        // Optimize logo sizing on scroll - use passive event listener for performance
+        const header = document.getElementById('pq-header');
+        const logoImg = document.querySelector('.pq-header-logo .navbar-brand img');
+        
+        if (window.innerWidth >= 992 && header && logoImg) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    logoImg.style.maxHeight = '45px';
+                    header.classList.add('pq-header-sticky');
+                } else {
+                    logoImg.style.maxHeight = '';
+                    header.classList.remove('pq-header-sticky');
+                }
+            }, {passive: true});
+        }
+    });
+})();
+</script>
+
+<!-- Deferred, lower priority scripts, loaded in order of importance -->
+<script defer src="{% static 'website/js/owl.carousel.js' %}"></script>
+<script defer src="{% static 'website/js/isotope.pkgd.min.js' %}"></script>
+<script defer src="{% static 'website/js/wow.min.js' %}"></script>
+<script defer src="{% static 'website/js/counter-fix.js' %}"></script>
+<script defer src="{% static 'website/js/responsive-cards.js' %}"></script>
+
+<!-- Delay loading these until core content is rendered -->
+<script defer src="{% static 'website/js/gsap.min.js' %}"></script>
+<script defer src="{% static 'website/js/ScrollTrigger.min.js' %}"></script>
+<script defer src="{% static 'website/js/jquery.magnific-popup.min.js' %}"></script>
+<script defer src="{% static 'website/js/rev-custom.js' %}"></script>
+
+<!-- Performance optimizer scripts - optimized versions for better loading patterns -->
+<script async src="{% static 'website/js/page-speed-optimizer.js' %}"></script>
+<script async src="{% static 'website/js/image-optimizer.js' %}"></script>
+
+<!-- Lowest priority scripts - for analytics -->
+<script async defer>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpbh-mt'},{'server':'sg2plmcpnl492384'},{'dcenter':'sg2'},{'cp_id':'9858662'},{'cp_cache':''},{'cp_cl':'8'}) // Monitoring performance
+</script>
+<script async defer src="{% static 'website/js/clients/scc-c2.min.js' %}"></script>
+</html>
