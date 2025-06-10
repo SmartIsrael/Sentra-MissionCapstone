@@ -337,24 +337,6 @@ class DataPipeline:
         # Class balancing techniques
         # Train/validation/test splitting
 ```
-
-### Supported Crop Categories
-**African Specialties (Primary Focus):**
-- Banana (8 disease classes)
-- Cassava (5 disease classes)
-- Beans (3 disease classes)
-- Cowpea (7 disease classes)
-- Groundnut (2 disease classes)
-- Cacao (3 disease classes)
-- Garlic (6 disease classes)
-
-**Global Crops (Secondary Coverage):**
-- Tomato (10 disease classes)
-- Corn/Maize (4 disease classes)
-- Apple (4 disease classes)
-- Grape (4 disease classes)
-- Potato (3 disease classes)
-
 ---
 
 ## 🤖 Machine Learning
@@ -469,12 +451,6 @@ REACT_APP_API_URL=https://api.sentraimpact.org
 REACT_APP_MAPBOX_TOKEN=your-mapbox-token
 ```
 
-### Scaling Considerations
-- **Horizontal Scaling**: Load balancer with multiple API instances
-- **Caching Layer**: Redis for model caching and session storage
-- **CDN Integration**: CloudFlare for global asset delivery
-- **Database Optimization**: PostgreSQL with read replicas
-- **Monitoring**: Prometheus + Grafana for system metrics
 
 ---
 
@@ -575,27 +551,6 @@ Results:
 | **Overall Average** | 92.8% | 91.9% | 92.5% | 92.2% |
 
 ---
-
-## 🤝 Contributing
-
-We welcome contributions from developers, researchers, and agricultural experts worldwide!
-
-### Contribution Areas
-- **🔬 ML Model Improvements**: New architectures, training techniques
-- **🌍 Dataset Expansion**: Additional crop types and disease classes
-- **🌐 Localization**: Multi-language support and regional adaptations
-- **📱 Mobile Development**: Native mobile applications
-- **🔧 DevOps**: Infrastructure optimization and deployment automation
-- **📚 Documentation**: Technical guides and user tutorials
-
-### Development Guidelines
-1. **Fork Repository**: Create your own fork for development
-2. **Create Feature Branch**: Use descriptive branch names
-3. **Write Tests**: Maintain >90% code coverage
-4. **Update Documentation**: Include inline comments and README updates
-5. **Performance Testing**: Ensure no regression in performance metrics
-6. **Security Review**: Follow OWASP guidelines for web security
-
 ### Code Standards
 ```python
 # Python code style (PEP 8 compliant)
@@ -631,19 +586,6 @@ const processCropImage = async (file: File): Promise<CropPrediction> => {
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-### Open Source Commitment
-- ✅ Free for educational and research use
-- ✅ Commercial use with attribution
-- ✅ Modification and distribution rights
-- ✅ Private use allowed
-- ❌ No warranty or liability
-
----
-
 ## 🙏 Acknowledgments
 
 ### Technology Partners
@@ -653,17 +595,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **[FastAPI](https://fastapi.tiangolo.com/)** - Modern API framework
 - **[Mapbox](https://mapbox.com/)** - Mapping and geospatial services
 
-### Research & Data Sources
-- **[PlantVillage](https://plantvillage.psu.edu/)** - Original plant disease dataset
-- **[Hugging Face](https://huggingface.co/)** - Dataset hosting and model sharing
-- **Rwanda Agriculture Board** - Local agricultural insights
-- **International Institute of Tropical Agriculture (IITA)** - African crop expertise
 
-### Development Community
-- All contributors and maintainers
-- Agricultural extension officers providing feedback
-- Farmers participating in field trials
-- Academic researchers and students
 
 ### Special Recognition
 *This project is dedicated to smallholder farmers across Africa who feed their communities and nations. Your resilience and innovation inspire our commitment to democratizing agricultural technology.*
@@ -673,34 +605,21 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 📞 Contact & Support
 
 ### Development Team
-- **Technical Lead**: [Your Name] - technical@sentraimpact.org
-- **ML Research**: [ML Lead] - research@sentraimpact.org
-- **Product Management**: [PM Name] - product@sentraimpact.org
+- **Technical Lead**: Smart Israel 
+
 
 ### Community Channels
-- **🐛 Bug Reports**: [GitHub Issues](https://github.com/your-org/sentra-platform/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/your-org/sentra-platform/discussions)
-- **📧 General Inquiries**: hello@sentraimpact.org
 - **🌍 Website**: [sentraimpact.org](https://sentraimpact.org)
-
-### Professional Services
-For enterprise deployments, custom training, or consultation services:
-- **Business Development**: business@sentraimpact.org
-- **Partnership Opportunities**: partnerships@sentraimpact.org
-- **Technical Support**: support@sentraimpact.org
 
 ---
 
 <div align="center">
 
-**🌱 Made with ❤️ for sustainable agriculture and food security**
+** Made for sustainable agriculture and food security**
 
 *SENTRA is committed to supporting farmers worldwide with AI-powered crop health monitoring.*
 
-[![GitHub Stars](https://img.shields.io/github/stars/your-org/sentra-platform?style=social)](https://github.com/your-org/sentra-platform)
-[![Twitter Follow](https://img.shields.io/twitter/follow/sentraimpact?style=social)](https://twitter.com/sentraimpact)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/company/sentraimpact)
 
-[⭐ Star this repo](https://github.com/your-org/sentra-platform) | [🐛 Report Bug](https://github.com/your-org/sentra-platform/issues) | [💡 Request Feature](https://github.com/your-org/sentra-platform/discussions) | [🤝 Contribute](CONTRIBUTING.md)
+
 
 </div>
