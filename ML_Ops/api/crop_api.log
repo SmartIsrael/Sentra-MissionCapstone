@@ -1,0 +1,123 @@
+2025-06-10 11:30:44,326 - main - WARNING - Model file not found at ../models/resnet50_best.pth. Using untrained model.
+2025-06-10 11:30:44,329 - main - INFO - Model loaded successfully on cpu
+2025-06-10 11:32:18,728 - main - WARNING - Model file not found at ../models/resnet50_best.pth. Using untrained model.
+2025-06-10 11:32:18,730 - main - INFO - Model loaded successfully on cpu
+2025-06-10 11:32:18,736 - main - INFO - Starting Crop Disease Classification API
+2025-06-10 11:32:18,736 - main - INFO - Device: cpu
+2025-06-10 11:32:18,736 - main - INFO - Model loaded: False
+2025-06-10 11:32:18,736 - main - INFO - Available classes: 38
+2025-06-10 11:32:27,471 - main - INFO - Shutting down Crop Disease Classification API
+2025-06-10 11:32:30,338 - main - WARNING - Model file not found at ../models/resnet50_best.pth. Using untrained model.
+2025-06-10 11:32:30,340 - main - INFO - Model loaded successfully on cpu
+2025-06-10 11:32:30,345 - main - INFO - Starting Crop Disease Classification API
+2025-06-10 11:32:30,345 - main - INFO - Device: cpu
+2025-06-10 11:32:30,345 - main - INFO - Model loaded: False
+2025-06-10 11:32:30,346 - main - INFO - Available classes: 38
+2025-06-10 11:34:20,937 - main - WARNING - Model file not found at ../models/resnet50_best.pth. Using untrained model.
+2025-06-10 11:34:20,939 - main - INFO - Model loaded successfully on cpu
+2025-06-10 11:34:20,947 - main - INFO - Starting Crop Disease Classification API
+2025-06-10 11:34:20,948 - main - INFO - Device: cpu
+2025-06-10 11:34:20,948 - main - INFO - Model loaded: False
+2025-06-10 11:34:20,948 - main - INFO - Available classes: 38
+2025-06-10 11:37:13,661 - main - INFO - Received prediction request for file: spinach.jpg
+2025-06-10 11:37:13,836 - main - INFO - Prediction completed: Orange - Haunglongbing (Citrus Greening) (0.977)
+2025-06-10 11:37:47,412 - main - INFO - Received prediction request for file: OIP.jpg
+2025-06-10 11:37:47,498 - main - INFO - Prediction completed: Orange - Haunglongbing (Citrus Greening) (0.868)
+2025-06-10 11:38:01,780 - main - INFO - Received prediction request for file: OIP.jpg
+2025-06-10 11:38:01,954 - main - INFO - Prediction completed: Orange - Haunglongbing (Citrus Greening) (0.868)
+2025-06-10 11:38:12,848 - main - INFO - Received prediction request for file: QVWbw5qnrfz4UdjVhyQuF.jpg
+2025-06-10 11:38:12,930 - main - INFO - Prediction completed: Orange - Haunglongbing (Citrus Greening) (0.820)
+2025-06-10 11:40:49,475 - main - INFO - Shutting down Crop Disease Classification API
+2025-06-10 11:46:59,437 - main - INFO - Shutting down Crop Disease Classification API
+2025-06-10 11:47:02,529 - main - WARNING - Model file not found at ../models/resnet50_best.pth. Using untrained model.
+2025-06-10 11:47:02,531 - main - INFO - Model loaded successfully on cpu
+2025-06-10 11:47:02,537 - main - INFO - Starting Crop Disease Classification API
+2025-06-10 11:47:02,537 - main - INFO - Device: cpu
+2025-06-10 11:47:02,537 - main - INFO - Model loaded: False
+2025-06-10 11:47:02,537 - main - INFO - Available classes: 73
+2025-06-10 11:47:08,876 - main - INFO - Shutting down Crop Disease Classification API
+2025-06-10 11:47:12,056 - main - INFO - Loading model from ../models/resnet50_model_hf.pt
+2025-06-10 11:47:12,141 - main - ERROR - Error loading model: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+2025-06-10 11:47:12,142 - main - ERROR - Traceback (most recent call last):
+  File "/home/begati/Desktop/sentra-bot/api/main.py", line 234, in _load_model
+    self.model.load_state_dict(checkpoint)
+  File "/home/begati/Desktop/sentra-bot/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+
+2025-06-10 11:47:41,766 - main - INFO - Loading model from ../models/resnet50_model_hf.pt
+2025-06-10 11:47:41,836 - main - ERROR - Error loading model: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+2025-06-10 11:47:41,837 - main - ERROR - Traceback (most recent call last):
+  File "/home/begati/Desktop/sentra-bot/api/main.py", line 234, in _load_model
+    self.model.load_state_dict(checkpoint)
+  File "/home/begati/Desktop/sentra-bot/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+
+2025-06-10 11:49:50,852 - main - INFO - Loading model from ../models/resnet50_model_hf.pt
+2025-06-10 11:49:50,933 - main - ERROR - Error loading model: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+2025-06-10 11:49:50,934 - main - ERROR - Traceback (most recent call last):
+  File "/home/begati/Desktop/sentra-bot/api/main.py", line 234, in _load_model
+    self.model.load_state_dict(checkpoint)
+  File "/home/begati/Desktop/sentra-bot/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+
+2025-06-10 11:50:13,261 - main - INFO - Loading model from ../models/resnet50_model_hf.pt
+2025-06-10 11:50:13,341 - main - ERROR - Error loading model: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+2025-06-10 11:50:13,342 - main - ERROR - Traceback (most recent call last):
+  File "/home/begati/Desktop/sentra-bot/api/main.py", line 234, in _load_model
+    self.model.load_state_dict(checkpoint)
+  File "/home/begati/Desktop/sentra-bot/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+
+2025-06-10 11:51:06,091 - main - INFO - Loading model from ../models/resnet50_model_hf.pt
+2025-06-10 11:51:06,386 - main - ERROR - Error loading model: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+2025-06-10 11:51:06,387 - main - ERROR - Traceback (most recent call last):
+  File "/home/begati/Desktop/sentra-bot/api/main.py", line 234, in _load_model
+    self.model.load_state_dict(checkpoint)
+  File "/home/begati/Desktop/sentra-bot/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+
+2025-06-10 11:51:06,426 - main - INFO - Loading model from ../models/resnet50_model_hf.pt
+2025-06-10 11:51:06,682 - main - ERROR - Error loading model: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+2025-06-10 11:51:06,683 - main - ERROR - Traceback (most recent call last):
+  File "/home/begati/Desktop/sentra-bot/api/main.py", line 234, in _load_model
+    self.model.load_state_dict(checkpoint)
+  File "/home/begati/Desktop/sentra-bot/venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for ResNet:
+	size mismatch for fc.weight: copying a param with shape torch.Size([14, 2048]) from checkpoint, the shape in current model is torch.Size([73, 2048]).
+	size mismatch for fc.bias: copying a param with shape torch.Size([14]) from checkpoint, the shape in current model is torch.Size([73]).
+
+2025-06-10 11:52:56,816 - main - WARNING - Model file not found at ../models/resnet50_model_hf.pt. Using untrained model.
+2025-06-10 11:52:56,818 - main - INFO - Model loaded successfully on cpu
+2025-06-10 11:52:56,823 - main - INFO - Starting Crop Disease Classification API
+2025-06-10 11:52:56,823 - main - INFO - Device: cpu
+2025-06-10 11:52:56,823 - main - INFO - Model loaded: False
+2025-06-10 11:52:56,823 - main - INFO - Available classes: 73
+2025-06-10 11:55:36,815 - main - INFO - Shutting down Crop Disease Classification API
