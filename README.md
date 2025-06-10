@@ -3,8 +3,11 @@
 # SENTRA - Democratizing AI for Climate Resilience for Smallholder Farmers Across Africa
 
 LINK TO MY MODEL: (https://drive.google.com/drive/folders/1VRbiZeuZ-9WAvu4x3r4Q3xV1lw5HyWBU?usp=sharing)
+
 LINK TO MY GITHUB REPO: (https://github.com/SmartIsrael/Sentra-MissionCapstone)
-LINK TO MY GITHUB DASHBOARD REPO: (https://github.com/SmartIsrael/Sentra-MissionCapstone/tree/main/Sentra_dashboard)
+
+LINK TO MY GITHUB DASHBOARD REPO: (https://github.com/SmartIsrael/Sentra-MissionCapstone/Sentra_dashboard)
+
 LINK TO MY VIDEO: (https://youtu.be/a_JbHbtLIXM)
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
